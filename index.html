@@ -21,7 +21,7 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand"><div class="mark">K</div><div><h1>K-pop Schedule</h1><p>공식 일정만 모아 보는 개인 캘린더</p></div></div>
-      <div class="update"><i class="dot"></i><span id="lastUpdated">공식 출처 확인 · 2026.09.27 02:00 KST</span></div>
+      <div class="update"><i class="dot"></i><span id="lastUpdated">공식 출처 확인 · 2026.09.27 02:07 KST</span></div>
     </header>
     <section class="hero">
       <div class="hero-card"><div class="eyebrow">Official K-pop calendar</div><h2>놓치기 싫은 순간을<br><span>한 달력 안에.</span></h2><p class="hero-copy">NOL·인터파크·티켓링크·멜론티켓·YES24 등 공식 예매처와 주최사·소속사 공지에서 확인한 K-pop 일정을 표시합니다. 시간 미공개 일정은 ‘미정’으로 안내합니다.</p></div>
@@ -41,11 +41,11 @@
         <section class="side-card"><h3>다가오는 일정</h3><div id="upcoming" class="next-list"><p class="empty-next">공식 출처에서 확인된 일정이 없습니다.</p></div></section>
       </aside>
     </main>
-    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.27 02:00 KST</b></span><span>공식 출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다</span></footer>
+    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.27 02:07 KST</b></span><span>공식 출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다</span></footer>
   </div>
   <script>
     // Official ticketing, organizer, venue or artist sources are sufficient for registration.
-    const VERIFIED_AT = '2026-09-27 02:00 KST';
+    const VERIFIED_AT = '2026-09-27 02:07 KST';
     const source = (label,url) => ({label,url});
     const show = ({dates,times=[],artist,title,venue,city='서울',type='concert',sources}) => dates.map((date,i)=>({date,time:times[i]||'미정',artist,title,venue,city,type,verified:true,verifiedAt:VERIFIED_AT,sources}));
     const SCHEDULE_DATA = [
@@ -66,7 +66,7 @@
       ...show({dates:['2026-10-23','2026-10-24','2026-10-25'],times:['19:00','18:00','16:00'],artist:'LUCY',title:'2026 LUCY 9TH CONCERT 〈ISLAND〉 ENCORE',venue:'고려대학교 화정체육관',sources:[source('멜론티켓 공식 예매 안내','https://ticket.melon.com/csoon/detail.htm?csoonId=12823')]}),
       ...show({dates:['2026-10-24'],artist:'DKB',title:'2026 DKB FAN-CON 〈BF: Besties Forever〉',venue:'큐브컨벤션센터',type:'fanmeeting',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/60284')]}),
       ...show({dates:['2026-10-24','2026-10-25'],artist:'82MAJOR',title:'6th CONCERT 〈82CLUB : out of control〉',venue:'YES24 LIVE HALL',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/60026')]}),
-      ...show({dates:['2026-10-30'],artist:'ONEWE × B1A4',title:'MOMENT FESTA',venue:'스카이아트홀',sources:[source('멜론티켓 공식 예매 페이지','https://ticket.melon.com/performance/index.htm?prodId=213796')]}),
+      ...show({dates:['2026-10-30'],times:['20:00'],artist:'ONEWE × B1A4',title:'MOMENT FESTA',venue:'스카이아트홀',sources:[source('멜론티켓 공식 예매 페이지','https://ticket.melon.com/performance/index.htm?prodId=213919')]}),
       ...show({dates:['2026-11-01'],artist:'LUDA',title:'10th Anniversary FANMEETING 〈CAPTAIN LU : SECRET BASE〉',venue:'가빈아트홀',type:'fanmeeting',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/60139')]}),
       ...show({dates:['2026-11-06','2026-11-07','2026-11-08'],artist:'MAX CHANGMIN',title:'LIVE SESSION : RESONANCE in SEOUL',venue:'YES24 LIVE HALL',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/59888')]}),
       ...show({dates:['2026-11-07'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉 - 강릉',venue:'강릉 스피드 스케이팅 경기장',city:'강릉',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/60017')]}),
