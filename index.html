@@ -21,7 +21,7 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand"><div class="mark">K</div><div><h1>K-pop Schedule</h1><p>공식 일정만 모아 보는 개인 캘린더</p></div></div>
-      <div class="update"><i class="dot"></i><span id="lastUpdated">공식 출처 확인 · 2026.09.26 18:14 KST</span></div>
+      <div class="update"><i class="dot"></i><span id="lastUpdated">공식 출처 확인 · 2026.09.26 18:31 KST</span></div>
     </header>
     <section class="hero">
       <div class="hero-card"><div class="eyebrow">Official K-pop calendar</div><h2>놓치기 싫은 순간을<br><span>한 달력 안에.</span></h2><p class="hero-copy">NOL·인터파크·티켓링크·멜론티켓·YES24 등 공식 예매처와 주최사·소속사 공지에서 확인한 K-pop 일정을 표시합니다. 시간 미공개 일정은 ‘미정’으로 안내합니다.</p></div>
@@ -41,34 +41,51 @@
         <section class="side-card"><h3>다가오는 일정</h3><div id="upcoming" class="next-list"><p class="empty-next">공식 출처에서 확인된 일정이 없습니다.</p></div></section>
       </aside>
     </main>
-    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.26 18:14 KST</b></span><span>공식 출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다</span></footer>
+    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.26 18:31 KST</b></span><span>공식 출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다</span></footer>
   </div>
   <script>
     // Official ticketing, organizer, venue or artist sources are sufficient for registration.
-    const VERIFIED_AT = '2026-09-26 18:14 KST';
+    const VERIFIED_AT = '2026-09-26 18:31 KST';
     const source = (label,url) => ({label,url});
     const show = ({dates,times=[],artist,title,venue,city='서울',type='concert',sources}) => dates.map((date,i)=>({date,time:times[i]||'미정',artist,title,venue,city,type,verified:true,verifiedAt:VERIFIED_AT,sources}));
     const NOL_KR = source('NOL 공식 공연 목록','https://nol.yanolja.com/ticket/genre/concert');
     const NOL_WORLD = source('NOL 한국 공식 공연 목록','https://nol.yanolja.com/ticket/genre/concert');
     const NOL_JP = source('NOL 한국 공식 공연 목록','https://nol.yanolja.com/ticket/genre/concert');
     const MELON = source('멜론티켓 공식 공연 목록','https://ticket.melon.com/main/index.htm');
+    const YES24 = source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/');
     const SCHEDULE_DATA = [
       ...show({dates:['2026-10-03','2026-10-04'],times:['18:00','17:00'],artist:'&TEAM',title:"2026 &TEAM CONCERT TOUR 'BLAZE THE WAY' ENCORE",venue:'KSPO DOME',sources:[source('Weverse · YX LABELS 공식 공지','https://weverse.io/andteam/notice/37990'),source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26011092')]}),
       ...show({dates:['2026-10-03','2026-10-04'],artist:'산들',title:'2026 SANDEUL CONCERT',venue:'블루스퀘어 SOL트래블홀',sources:[NOL_KR]}),
-      ...show({dates:['2026-10-09','2026-10-10','2026-10-11'],artist:'AKMU',title:'AKMU 2026 CONCERT',venue:'KSPO DOME',sources:[source('AKMU 공식 채널 · YES24 예매 안내','https://www.youtube.com/watch?v=NgmngjnkP-0')]}),
+      ...show({dates:['2026-10-09','2026-10-10','2026-10-11'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉',venue:'KSPO DOME',sources:[YES24]}),
       ...show({dates:['2026-10-09','2026-10-10'],artist:'PENTAGON',title:'PENTAGON 10th Anniversary Concert',venue:'블루스퀘어 SOL트래블홀',sources:[NOL_KR]}),
+      ...show({dates:['2026-10-09','2026-10-10'],artist:'POW',title:'2026 POW CONCERT: COLOR ON IN SEOUL',venue:'YES24 원더로크홀',sources:[YES24]}),
       ...show({dates:['2026-10-10'],artist:'ALL(H)OURS',title:'ALL(H)OURS 공연',venue:'성신여자대학교 운정그린캠퍼스 대강당',sources:[NOL_WORLD]}),
+      ...show({dates:['2026-10-10'],times:['18:00'],artist:'MODYSSEY',title:'2026 MODYSSEY FAN CONCERT TOUR IN SEOUL',venue:'명화라이브홀',type:'fanmeeting',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26013484')]}),
+      ...show({dates:['2026-10-16','2026-10-17','2026-10-18'],artist:'HIGHLIGHT',title:'2026 HIGHLIGHT FAN CON',venue:'장충체육관',type:'fanmeeting',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/Detail/PerfEtcInfo.aspx?IdPerf=59891&IdSubGenre=15462')]}),
       ...show({dates:['2026-10-17','2026-10-18'],times:['18:00','17:00'],artist:'ILLIT',title:'ILLIT LIVE',venue:'인스파이어 아레나',city:'인천',sources:[source('NOL 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26012865')]}),
       ...show({dates:['2026-10-17','2026-10-18'],times:['18:00','16:00'],artist:'NEXZ',title:'NEXZ 1ST ASIA TOUR 〈SAUCIN’ THE WORLD〉',venue:'올림픽공원 올림픽홀',sources:[source('JYP NEXZ 공식 공지','https://nexz.jype.com/Mobile/NoticeView?AnSeq=6615&NoticeNumber=3'),source('NEXZ 공식 FANS 공지','https://app.fans/community/nexz/notice/27rg1e654b'),source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26012968')]}),
       ...show({dates:['2026-10-17','2026-10-18'],artist:'The Rose · iKON · ONF 외',title:'HEARTBEAT BY DUDUDO 2026',venue:'고려대학교 화정체육관',type:'festival',sources:[source('멜론티켓 공식 예매 페이지','https://ticket.melon.com/performance/index.htm?prodId=213848')]}),
+      ...show({dates:['2026-10-17'],artist:'K-pop artists',title:'NOL FESTIVAL : DAY 1 - K-POP STAGE',venue:'일산 킨텍스 제2전시장',city:'고양',type:'festival',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26007651')]}),
+      ...show({dates:['2026-10-18'],artist:'K-pop artists',title:'NOL FESTIVAL : DAY 2 - SUPER LIVE STAGE',venue:'일산 킨텍스 제2전시장',city:'고양',type:'festival',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26007655')]}),
       ...show({dates:['2026-10-23','2026-10-24','2026-10-25'],artist:'DAY6',title:'DAY6 5TH FANMEETING 〈EVERY DAY6, EVERY My Day〉',venue:'인스파이어 아레나',city:'인천',type:'fanmeeting',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26012624')]}),
       ...show({dates:['2026-10-23','2026-10-24','2026-10-25'],times:['19:00','18:00','16:00'],artist:'LUCY',title:'2026 LUCY 9TH CONCERT 〈ISLAND〉 ENCORE',venue:'고려대학교 화정체육관',sources:[source('멜론티켓 공식 예매 안내','https://ticket.melon.com/csoon/detail.htm?csoonId=12823')]}),
+      ...show({dates:['2026-10-24'],artist:'DKB',title:'2026 DKB FAN-CON 〈BF: Besties Forever〉',venue:'큐브컨벤션센터',type:'fanmeeting',sources:[YES24]}),
+      ...show({dates:['2026-10-24','2026-10-25'],artist:'82MAJOR',title:'6th CONCERT 〈82CLUB : out of control〉',venue:'YES24 LIVE HALL',sources:[YES24]}),
       ...show({dates:['2026-10-30'],artist:'ONEWE × B1A4',title:'MOMENT FESTA',venue:'스카이아트홀',sources:[MELON]}),
+      ...show({dates:['2026-11-01'],artist:'LUDA',title:'10th Anniversary FANMEETING 〈CAPTAIN LU : SECRET BASE〉',venue:'가빈아트홀',type:'fanmeeting',sources:[YES24]}),
+      ...show({dates:['2026-11-06','2026-11-07','2026-11-08'],artist:'MAX CHANGMIN',title:'LIVE SESSION : RESONANCE in SEOUL',venue:'YES24 LIVE HALL',sources:[YES24]}),
+      ...show({dates:['2026-11-07'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉 - 강릉',venue:'강릉 스피드 스케이팅 경기장',city:'강릉',sources:[YES24]}),
       ...show({dates:['2026-11-07','2026-11-08'],artist:'박진영 (GOT7)',title:'1ST CONCERT TOUR [CODE#] IN SEOUL',venue:'장충체육관',sources:[MELON]}),
       ...show({dates:['2026-11-13','2026-11-14','2026-11-15'],artist:'TOMORROW X TOGETHER',title:'WORLD TOUR 〈ACT : STEAL THE WIND〉',venue:'KSPO DOME',sources:[NOL_WORLD]}),
+      ...show({dates:['2026-11-14','2026-11-15'],artist:'MMA',title:'MMA2026 · Melon Music Awards',venue:'고척스카이돔',type:'awards',sources:[source('카카오엔터테인먼트 공식 발표','https://kakaoent.com/pr/detail/582')]}),
       ...show({dates:['2026-11-20','2026-11-21'],artist:'MAMA',title:'2026 MAMA AWARDS',venue:'교세라 돔 오사카',city:'오사카',type:'awards',sources:[source('CJ ENM 공식 발표','https://www.cjenm.com/en/news/2026-mama-awards-to-take-place-in-japan---from-november-2021/')]}),
+      ...show({dates:['2026-11-21','2026-11-22'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉 - 대구',venue:'엑스코 서관 1홀',city:'대구',sources:[YES24]}),
       ...show({dates:['2026-11-21','2026-11-22'],artist:'MONSTA X',title:'MONSTA X WORLD TOUR ENCORE',venue:'인스파이어 아레나',city:'인천',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26013132')]}),
-      ...show({dates:['2026-11-28','2026-11-29'],times:['17:00','16:00'],artist:'MINHO',title:'MINHO CONCERT 〈MEAN : of feral〉',venue:'KBS 아레나',sources:[source('티켓링크 공식 공지','https://www.ticketlink.co.kr/help/notice/66016')]})
+      ...show({dates:['2026-11-28','2026-11-29'],times:['17:00','16:00'],artist:'MINHO',title:'MINHO CONCERT 〈MEAN : of feral〉',venue:'KBS 아레나',sources:[source('티켓링크 공식 공지','https://www.ticketlink.co.kr/help/notice/66016')]}),
+      ...show({dates:['2026-12-05','2026-12-06'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉 - 대전',venue:'대전컨벤션센터 제2전시장',city:'대전',sources:[YES24]}),
+      ...show({dates:['2026-12-05','2026-12-06'],artist:'AAA',title:'Asia Artist Awards 2026',venue:'가오슝 내셔널 스타디움',city:'가오슝',type:'awards',sources:[source('AAA 조직위원회 공식 발표','https://www.asiaartistawards.com/news/detail/187663/all')]}),
+      ...show({dates:['2026-12-19','2026-12-20'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉 - 부산',venue:'부산 벡스코 제1전시장',city:'부산',sources:[YES24]}),
+      ...show({dates:['2026-12-25'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉 - 광주',venue:'김대중컨벤션센터',city:'광주',sources:[YES24]})
     ];
     const state = { date:new Date(2026,8,26), view:'month' };
     const $ = id => document.getElementById(id);
@@ -77,7 +94,7 @@
     const key = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
     function visibleEvents(){const q=$('search').value.trim().toLowerCase(); const stage=$('stageToggle').checked; const type=$('typeFilter').value; return SCHEDULE_DATA.filter(e=>e.verified && e.sources?.length>=1 && (stage || e.type!=='stage') && (type==='all'||e.type===type) && (!q || `${e.artist} ${e.title} ${e.venue} ${e.city}`.toLowerCase().includes(q)));}
     function render(){ $('monthTitle').textContent=fmtMonth.format(state.date); $('verifiedCount').textContent=visibleEvents().length; state.view==='month'?renderMonth():renderList(); renderUpcoming(); }
-    const typeLabel = {concert:'공연',fanmeeting:'팬미팅',festival:'페스티벌',awards:'시상식',stage:'무대인사'};
+    const typeLabel = {concert:'콘서트',fanmeeting:'팬미팅',festival:'페스티벌',awards:'시상식',stage:'무대인사'};
     const eventUrl = e => (e.sources.find(s=>/(예매|티켓|NOL|YES24)/i.test(s.label))||e.sources[0]).url;
     function renderMonth(){const host=$('calendar'); const first=new Date(state.date.getFullYear(),state.date.getMonth(),1); const start=new Date(first); start.setDate(1-first.getDay()); let html='<div class="cal-grid"><div class="weekday">일</div><div class="weekday">월</div><div class="weekday">화</div><div class="weekday">수</div><div class="weekday">목</div><div class="weekday">금</div><div class="weekday">토</div>'; const ev=visibleEvents(); for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const inMonth=d.getMonth()===state.date.getMonth();const today=key(d)==='2026-09-26';const dayEvents=ev.filter(e=>e.date===key(d)); html+=`<div class="day ${inMonth?'':'muted'} ${today?'today':''}"><div class="date">${d.getDate()}</div><div class="events">${dayEvents.map(e=>`<a class="event ${e.type}" href="${eventUrl(e)}" target="_blank" rel="noopener noreferrer" title="예매/공식 페이지 열기 · ${e.title}"><span class="event-type">${typeLabel[e.type]||'일정'} ↗</span>${e.artist} · ${e.title}</a>`).join('')}</div></div>`;} host.innerHTML=html+'</div>'; }
     function renderList(){const events=visibleEvents().sort((a,b)=>a.date.localeCompare(b.date)||a.time.localeCompare(b.time)); $('calendar').innerHTML=events.length?`<div style="padding:12px">${events.map(e=>`<div class="list-event"><div class="list-row"><div class="next-date">${e.date.slice(5).replace('-','/')}</div><div><span class="badge" style="margin-bottom:5px">${typeLabel[e.type]||'일정'}</span><b>${e.artist} · ${e.title}</b><span style="display:block;color:var(--muted);font-size:12px">${e.venue||'장소 확인 중'} · ${e.time}</span></div><div class="list-actions"><span class="badge">공식 ${e.sources.length}</span><a class="ticket-btn" href="${eventUrl(e)}" target="_blank" rel="noopener noreferrer">예매 링크 ↗</a></div></div><details class="event-sources"><summary>공식 출처 ${e.sources.length}곳 · ${e.verifiedAt}</summary><div class="source-links">${e.sources.map((s,i)=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${i+1}. ${s.label}</a>`).join('')}</div></details></div>`).join('')}</div>`:'<div class="empty"><div><strong>표시할 일정이 없습니다</strong><p>공식 출처에서 확인된 일정만 추가됩니다. 검색어나 종류 필터를 바꿔 보세요.</p></div></div>'; }
