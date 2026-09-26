@@ -12,7 +12,7 @@
     .hero{display:grid;grid-template-columns:1.4fr .6fr;gap:18px;margin-bottom:18px}.hero-card,.stat-card,.calendar-card,.side-card{background:linear-gradient(150deg,rgba(23,28,44,.93),rgba(13,16,29,.93));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}.hero-card{padding:30px 31px;position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-100px;top:-145px;background:radial-gradient(circle,rgba(255,111,180,.22),transparent 68%)}.eyebrow{color:var(--pink);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}.hero h2{font-size:clamp(27px,4vw,46px);line-height:1.13;letter-spacing:-.06em;margin:11px 0 13px;max-width:720px}.hero h2 span{color:var(--pink)}.hero-copy{max-width:690px;color:#c5cbe0;margin:0}.stat-card{padding:24px;display:flex;flex-direction:column;justify-content:space-between}.stat-label{font-size:13px;color:var(--muted)}.stat-number{font-size:46px;font-weight:850;letter-spacing:-.07em}.stat-foot{color:var(--muted);font-size:12px}.verified{color:var(--green)}
     .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0}.search{flex:1 1 240px;position:relative}.search input{width:100%;border:1px solid var(--line);background:#0d1120;color:var(--text);border-radius:13px;padding:12px 14px 12px 39px;outline:none}.search input:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,111,180,.12)}.search span{position:absolute;left:14px;top:10px;color:var(--muted)}.toggle{display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid var(--line);background:#0d1120;border-radius:13px;color:#e8ebf6;font-size:14px;user-select:none}.toggle input{appearance:none;width:38px;height:22px;border-radius:99px;background:#424a61;position:relative;margin:0;transition:.2s}.toggle input:before{content:"";position:absolute;width:16px;height:16px;left:3px;top:3px;border-radius:50%;background:#fff;transition:.2s}.toggle input:checked{background:var(--pink)}.toggle input:checked:before{transform:translateX(16px)}.view-btns{display:flex;border:1px solid var(--line);border-radius:13px;overflow:hidden}.view-btns button,.month-btn{border:0;background:#0d1120;color:var(--muted);padding:10px 13px}.view-btns button.active,.month-btn:hover{background:var(--panel2);color:var(--text)}.month-nav{display:flex;gap:8px;align-items:center}.month-btn{border:1px solid var(--line);border-radius:12px;font-size:18px;line-height:1}.month-title{min-width:150px;text-align:center;font-size:18px;font-weight:800;letter-spacing:-.04em}
     .main{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px}.calendar-card{padding:18px}.calendar-head{display:flex;justify-content:space-between;align-items:center;padding:3px 4px 17px}.calendar-head h3{margin:0;font-size:18px}.calendar-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.legend{display:flex;gap:12px;color:var(--muted);font-size:12px}.legend i{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);min-height:500px}.weekday,.day{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.weekday{min-height:36px;display:grid;place-items:center;color:var(--muted);font-size:12px;background:rgba(255,255,255,.018)}.day{min-height:118px;padding:9px;position:relative;background:rgba(7,10,19,.2)}.day.muted{background:rgba(4,6,12,.32);color:#505a75}.day.today{background:linear-gradient(160deg,rgba(255,111,180,.12),rgba(105,165,255,.03))}.date{font-size:12px;color:#bbc3d8}.today .date{display:inline-grid;place-items:center;width:24px;height:24px;background:var(--pink);color:#150915;border-radius:50%;font-weight:800}.events{display:flex;flex-direction:column;gap:5px;margin-top:8px}.event{display:block;border:1px solid rgba(105,165,255,.33);background:rgba(105,165,255,.12);border-radius:8px;padding:5px 6px;font-size:11px;line-height:1.28;color:#dbe8ff;overflow:hidden}.event.stage{border-color:rgba(255,111,180,.4);background:rgba(255,111,180,.12);color:#ffe2ef}.event .event-type{display:block;color:var(--blue);font-size:10px;font-weight:800;margin-bottom:2px}.event.stage .event-type{color:var(--pink)}.empty{height:100%;min-height:420px;display:grid;place-items:center;text-align:center;padding:50px 20px;color:var(--muted)}.empty strong{display:block;color:var(--text);font-size:18px;margin-bottom:8px}.empty p{margin:0;max-width:410px;font-size:14px}
-    .side{display:flex;flex-direction:column;gap:18px}.side-card{padding:20px}.side-card h3{margin:0 0 14px;font-size:16px}.source-list{display:flex;flex-direction:column;gap:11px}.source{display:flex;gap:10px;align-items:flex-start}.source-icon{width:28px;height:28px;border-radius:9px;background:rgba(99,230,174,.12);color:var(--green);display:grid;place-items:center;font-weight:900;font-size:12px;flex:none}.source b{font-size:13px;display:block}.source span{font-size:12px;color:var(--muted)}.source-rule{height:1px;background:var(--line);margin:17px 0}.next-list{display:flex;flex-direction:column;gap:10px}.next-item{display:flex;gap:11px;align-items:center}.next-date{width:43px;height:43px;border-radius:12px;background:#20263a;display:grid;place-items:center;line-height:1.05;text-align:center;color:var(--blue);font-weight:800;font-size:12px;flex:none}.next-item b{display:block;font-size:13px}.next-item span{display:block;color:var(--muted);font-size:12px}.empty-next{color:var(--muted);font-size:13px;margin:0}.badge{display:inline-flex;gap:5px;align-items:center;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:800;color:var(--green);background:rgba(99,230,174,.1)}.footer{margin-top:26px;color:#727c97;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.footer a{color:#aeb8d5}.mobile-only{display:none}
+    .side{display:flex;flex-direction:column;gap:18px}.side-card{padding:20px}.side-card h3{margin:0 0 14px;font-size:16px}.source-list{display:flex;flex-direction:column;gap:11px}.source{display:flex;gap:10px;align-items:flex-start}.source-icon{width:28px;height:28px;border-radius:9px;background:rgba(99,230,174,.12);color:var(--green);display:grid;place-items:center;font-weight:900;font-size:12px;flex:none}.source b{font-size:13px;display:block}.source span{font-size:12px;color:var(--muted)}.source-rule{height:1px;background:var(--line);margin:17px 0}.next-list{display:flex;flex-direction:column;gap:10px}.next-item{display:flex;gap:11px;align-items:center}.next-date{width:43px;height:43px;border-radius:12px;background:#20263a;display:grid;place-items:center;line-height:1.05;text-align:center;color:var(--blue);font-weight:800;font-size:12px;flex:none}.next-item b{display:block;font-size:13px}.next-item span{display:block;color:var(--muted);font-size:12px}.empty-next{color:var(--muted);font-size:13px;margin:0}.badge{display:inline-flex;gap:5px;align-items:center;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:800;color:var(--green);background:rgba(99,230,174,.1)}.footer{margin-top:26px;color:#727c97;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.footer a{color:#aeb8d5}.list-event{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}.list-event+.list-event{margin-top:10px}.list-row{display:flex;gap:11px;align-items:center}.event-sources{margin:10px 0 0 54px;color:var(--muted);font-size:12px}.event-sources summary{cursor:pointer;color:var(--green);font-weight:800}.source-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.source-links a{color:#cfe1ff;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:5px 7px;background:#0d1120}.source-links a:hover{border-color:var(--blue)}.mobile-only{display:none}
     @media(max-width:980px){.hero{grid-template-columns:1fr}.main{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.day{min-height:105px}}
     @media(max-width:620px){.wrap{padding:17px 12px 38px}.topbar{align-items:flex-start;margin-bottom:22px}.update{font-size:11px}.brand h1{font-size:18px}.hero-card{padding:24px 21px}.hero h2{font-size:31px}.stat-card{min-height:132px}.toolbar{align-items:stretch}.search{flex-basis:100%}.month-nav{width:100%;justify-content:space-between}.month-title{min-width:0}.view-btns{flex:1}.view-btns button{flex:1}.calendar-card{padding:10px}.calendar-head{display:block}.legend{margin-top:9px}.cal-grid{min-height:430px}.weekday{font-size:10px}.day{padding:6px;min-height:74px}.event{padding:4px;font-size:10px}.event .event-type{font-size:9px}.events{gap:3px;margin-top:5px}.side{display:flex}.side-card{padding:17px}.footer{display:block}.footer span{display:block;margin-bottom:8px}}
   </style>
@@ -21,7 +21,7 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand"><div class="mark">K</div><div><h1>K-pop Schedule</h1><p>공식 일정만 모아 보는 개인 캘린더</p></div></div>
-      <div class="update"><i class="dot"></i><span id="lastUpdated">자동 검증 대기</span></div>
+      <div class="update"><i class="dot"></i><span id="lastUpdated">3중 검증 완료 · 2026.09.26 18:02 KST</span></div>
     </header>
     <section class="hero">
       <div class="hero-card"><div class="eyebrow">Triple-checked calendar</div><h2>놓치기 싫은 순간을<br><span>한 달력 안에.</span></h2><p class="hero-copy">공식 공지, 주최·예매처, 아티스트 채널을 교차 확인한 일정만 표시합니다. 확인되지 않은 루머와 출처 부족 일정은 달력에 넣지 않습니다.</p></div>
@@ -40,11 +40,56 @@
         <section class="side-card"><h3>다가오는 일정</h3><div id="upcoming" class="next-list"><p class="empty-next">아직 3중 검증을 통과한 일정이 없습니다.</p></div></section>
       </aside>
     </main>
-    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">첫 실행 전</b></span><span>출처 링크는 각 일정 상세에서 확인할 수 있습니다 · <a href="#" onclick="return false">검증 원칙</a></span></footer>
+    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.26 18:02 KST</b></span><span>출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다 · <a href="#" onclick="return false">검증 원칙</a></span></footer>
   </div>
   <script>
     // The daily job replaces this array only with records carrying verified: true and three sources.
-    const SCHEDULE_DATA = [];
+    const SCHEDULE_DATA = [
+      {
+        date:'2026-10-03', time:'18:00', artist:'&TEAM',
+        title:"2026 &TEAM CONCERT TOUR 'BLAZE THE WAY' ENCORE",
+        venue:'KSPO DOME', city:'서울', type:'concert', verified:true,
+        verifiedAt:'2026-09-26 18:02 KST',
+        sources:[
+          {label:'Weverse · YX LABELS 공식 공지',url:'https://weverse.io/andteam/notice/37990'},
+          {label:'&TEAM 공식 채널 티저',url:'https://www.youtube.com/watch?v=HAlc45bbncE'},
+          {label:'NOL 공식 예매 페이지',url:'https://world.nol.com/en/ticket/places/26000892/products/26011092'}
+        ]
+      },
+      {
+        date:'2026-10-04', time:'17:00', artist:'&TEAM',
+        title:"2026 &TEAM CONCERT TOUR 'BLAZE THE WAY' ENCORE",
+        venue:'KSPO DOME', city:'서울', type:'concert', verified:true,
+        verifiedAt:'2026-09-26 18:02 KST',
+        sources:[
+          {label:'Weverse · YX LABELS 공식 공지',url:'https://weverse.io/andteam/notice/37990'},
+          {label:'&TEAM 공식 채널 티저',url:'https://www.youtube.com/watch?v=HAlc45bbncE'},
+          {label:'NOL 공식 예매 페이지',url:'https://world.nol.com/en/ticket/places/26000892/products/26011092'}
+        ]
+      },
+      {
+        date:'2026-10-17', time:'18:00', artist:'NEXZ',
+        title:'NEXZ 1ST ASIA TOUR 〈SAUCIN’ THE WORLD〉',
+        venue:'올림픽공원 올림픽홀', city:'서울', type:'concert', verified:true,
+        verifiedAt:'2026-09-26 18:02 KST',
+        sources:[
+          {label:'JYP NEXZ 공식 공지',url:'https://nexz.jype.com/Mobile/NoticeView?AnSeq=6615&NoticeNumber=3'},
+          {label:'NEXZ 공식 FANS 공지',url:'https://app.fans/community/nexz/notice/27rg1e654b'},
+          {label:'NOL 공식 예매 페이지',url:'https://world.nol.com/en/ticket/places/26001096/products/26012968'}
+        ]
+      },
+      {
+        date:'2026-10-18', time:'16:00', artist:'NEXZ',
+        title:'NEXZ 1ST ASIA TOUR 〈SAUCIN’ THE WORLD〉',
+        venue:'올림픽공원 올림픽홀', city:'서울', type:'concert', verified:true,
+        verifiedAt:'2026-09-26 18:02 KST',
+        sources:[
+          {label:'JYP NEXZ 공식 공지',url:'https://nexz.jype.com/Mobile/NoticeView?AnSeq=6615&NoticeNumber=3'},
+          {label:'NEXZ 공식 FANS 공지',url:'https://app.fans/community/nexz/notice/27rg1e654b'},
+          {label:'NOL 공식 예매 페이지',url:'https://world.nol.com/en/ticket/places/26001096/products/26012968'}
+        ]
+      }
+    ];
     const state = { date:new Date(2026,8,26), view:'month' };
     const $ = id => document.getElementById(id);
     const fmtMonth = new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'long'});
@@ -53,7 +98,7 @@
     function visibleEvents(){const q=$('search').value.trim().toLowerCase(); const stage=$('stageToggle').checked; return SCHEDULE_DATA.filter(e=>e.verified && e.sources?.length>=3 && (stage || e.type!=='stage') && (!q || `${e.artist} ${e.title} ${e.venue} ${e.city}`.toLowerCase().includes(q)));}
     function render(){ $('monthTitle').textContent=fmtMonth.format(state.date); $('verifiedCount').textContent=visibleEvents().length; state.view==='month'?renderMonth():renderList(); renderUpcoming(); }
     function renderMonth(){const host=$('calendar'); const first=new Date(state.date.getFullYear(),state.date.getMonth(),1); const start=new Date(first); start.setDate(1-first.getDay()); let html='<div class="cal-grid"><div class="weekday">일</div><div class="weekday">월</div><div class="weekday">화</div><div class="weekday">수</div><div class="weekday">목</div><div class="weekday">금</div><div class="weekday">토</div>'; const ev=visibleEvents(); for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const inMonth=d.getMonth()===state.date.getMonth();const today=key(d)==='2026-09-26';const dayEvents=ev.filter(e=>e.date===key(d)); html+=`<div class="day ${inMonth?'':'muted'} ${today?'today':''}"><div class="date">${d.getDate()}</div><div class="events">${dayEvents.map(e=>`<div class="event ${e.type==='stage'?'stage':''}" title="${e.title}"><span class="event-type">${e.type==='stage'?'무대인사':'일정'}</span>${e.artist} · ${e.title}</div>`).join('')}</div></div>`;} host.innerHTML=html+'</div>'; }
-    function renderList(){const events=visibleEvents().sort((a,b)=>a.date.localeCompare(b.date)); $('calendar').innerHTML=events.length?`<div class="next-list" style="padding:12px">${events.map(e=>`<div class="next-item"><div class="next-date">${e.date.slice(5).replace('-','/')}</div><div><b>${e.artist} · ${e.title}</b><span>${e.venue||'장소 확인 중'}${e.time?' · '+e.time:''}</span></div><span class="badge" style="margin-left:auto">3/3</span></div>`).join('')}</div>`:'<div class="empty"><div><strong>표시할 일정이 없습니다</strong><p>3개 출처가 모두 일치한 일정만 자동으로 추가됩니다. 검색어나 무대인사 스위치를 바꿔 보세요.</p></div></div>'; }
+    function renderList(){const events=visibleEvents().sort((a,b)=>a.date.localeCompare(b.date)||a.time.localeCompare(b.time)); $('calendar').innerHTML=events.length?`<div style="padding:12px">${events.map(e=>`<div class="list-event"><div class="list-row"><div class="next-date">${e.date.slice(5).replace('-','/')}</div><div><b>${e.artist} · ${e.title}</b><span style="display:block;color:var(--muted);font-size:12px">${e.venue||'장소 확인 중'}${e.time?' · '+e.time:''}</span></div><span class="badge" style="margin-left:auto">3/3</span></div><details class="event-sources"><summary>검증 출처 3곳 · ${e.verifiedAt}</summary><div class="source-links">${e.sources.map((s,i)=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${i+1}. ${s.label}</a>`).join('')}</div></details></div>`).join('')}</div>`:'<div class="empty"><div><strong>표시할 일정이 없습니다</strong><p>3개 출처가 모두 일치한 일정만 자동으로 추가됩니다. 검색어나 무대인사 스위치를 바꿔 보세요.</p></div></div>'; }
     function renderUpcoming(){const events=visibleEvents().filter(e=>e.date>=key(new Date(2026,8,26))).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,4); $('upcoming').innerHTML=events.length?events.map(e=>`<div class="next-item"><div class="next-date">${e.date.slice(5).replace('-','/')}</div><div><b>${e.artist} · ${e.title}</b><span>${e.venue||'장소 확인 중'}</span></div></div>`).join(''):'<p class="empty-next">아직 3중 검증을 통과한 일정이 없습니다.</p>'; }
     $('prev').onclick=()=>{state.date.setMonth(state.date.getMonth()-1);render()}; $('next').onclick=()=>{state.date.setMonth(state.date.getMonth()+1);render()}; $('search').oninput=render; $('stageToggle').onchange=render; document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.view=b.dataset.view;render()}); render();
   </script>
