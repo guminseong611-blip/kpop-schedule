@@ -21,7 +21,7 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand"><div class="mark">K</div><div><h1>K-pop Schedule</h1><p>공식 일정만 모아 보는 개인 캘린더</p></div></div>
-      <div class="update"><i class="dot"></i><span id="lastUpdated">공식 출처 확인 · 2026.09.27 13:42 KST</span></div>
+      <div class="update"><i class="dot"></i><span id="lastUpdated">공식 출처 확인 · 2026.09.27 13:55 KST</span></div>
     </header>
     <section class="hero">
       <div class="hero-card"><div class="eyebrow">Official K-pop calendar</div><h2>놓치기 싫은 순간을<br><span>한 달력 안에.</span></h2><p class="hero-copy">국내외 공식 예매처와 주최사·소속사 공지에서 확인한 K-pop 일정을 표시합니다. NOL·멜론티켓·티켓링크·YES24뿐 아니라 Ticketmaster·AXS·Live Nation 등 해외 공식 예매 링크도 연결합니다.</p></div>
@@ -40,16 +40,16 @@
         <section class="side-card"><h3>다가오는 일정</h3><div id="upcoming" class="next-list"><p class="empty-next">공식 출처에서 확인된 일정이 없습니다.</p></div></section>
       </aside>
     </main>
-    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.27 13:42 KST</b></span><span>공식 출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다</span></footer>
+    <footer class="footer"><span>마지막 자동 확인: <b id="footerUpdated">2026.09.27 13:55 KST</b></span><span>공식 출처 링크는 목록 보기의 각 일정에서 확인할 수 있습니다</span></footer>
   </div>
   <script>
     // Official ticketing, organizer, venue or artist sources are sufficient for registration.
-    const VERIFIED_AT = '2026-09-27 13:42 KST';
+    const VERIFIED_AT = '2026-09-27 13:55 KST';
     const source = (label,url) => ({label,url});
     const show = ({dates,times=[],artist,title,venue,city='서울',type='concert',sources,streamUrl='',streamLabel='온라인 스트리밍'}) => dates.map((date,i)=>({date,time:times[i]||'미정',artist,title,venue,city,type,verified:true,verifiedAt:VERIFIED_AT,sources,streamUrl,streamLabel}));
     const SCHEDULE_DATA = [
       ...show({dates:['2026-10-03','2026-10-04'],times:['18:00','17:00'],artist:'&TEAM',title:"2026 &TEAM CONCERT TOUR 'BLAZE THE WAY' ENCORE",venue:'KSPO DOME',sources:[source('Weverse · YX LABELS 공식 공지','https://weverse.io/andteam/notice/37990'),source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26011092')]}),
-      ...show({dates:['2026-10-03','2026-10-04'],artist:'산들',title:'2026 SANDEUL CONCERT 〈On The Breeze〉',venue:'블루스퀘어 우리WON뱅킹홀',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26012383')]}),
+      ...show({dates:['2026-10-03','2026-10-04'],times:['18:00','17:00'],artist:'산들',title:'2026 SANDEUL CONCERT 〈On The Breeze〉',venue:'블루스퀘어 우리WON뱅킹홀',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26012383')]}),
       ...show({dates:['2026-10-09','2026-10-10','2026-10-11'],times:['18:00','17:00','16:00'],artist:'AKMU',title:'2026 AKMU CONCERT 〈소문의 낙원〉',venue:'KSPO DOME',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/59418'),source('AKMU Weverse 공식 투어 공지','https://weverse.io/akmu/notice/39010')]}),
       ...show({dates:['2026-10-09','2026-10-10'],artist:'PENTAGON',title:'PENTAGON 10th Anniversary Tour 〈101010〉 in Seoul',venue:'블루스퀘어 우리WON뱅킹홀',sources:[source('NOL 한국 공식 예매 페이지','https://nol.yanolja.com/ticket/products/26011526')]}),
       ...show({dates:['2026-10-09','2026-10-10'],artist:'POW',title:'2026 POW CONCERT: COLOR ON IN SEOUL',venue:'YES24 원더로크홀',sources:[source('YES24 한국 공식 예매 페이지','https://m.ticket.yes24.com/Perf/59759')]}),
